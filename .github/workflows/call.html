@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>title</title>
+        <style type="text/css" media="all">
+    
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'kumbh', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background: #3b3b3b;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background-color: crimson;
+   
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button:hover{
+    transform: scale(1.075);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #10ff08;
+    background: -webkit-linear-gradient(to right, #24da33, #fd1d1d, #833ab4);
+    background: linear-gradient(to right, #16c943, #1dfd1d, #833ab4);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+/*
+.navbar__links:hover {
+    color:#833ab4;
+    transition: all 0.3s ease;
+    outline: #44107a;
+    border: dashed;
+    border-radius: 100px;
+    
+}
+*/
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+
+    .navbar__menu.active {
+        background: #131313; 
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+    }
+    
+    #navbar__logo {
+        padding-left: 25px;
+    }
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+        display: block;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor:pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/*photo*/
+.parent_container{
+    width: 360px;
+    height: auto;
+    margin: 0 ;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+   background-color: #80FF00;
+   display: absolute;
+    
+}
+ .nav{
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+ }
+ .israel{
+     width: 100%;
+     height: 500px;
+ }
+ 
+ 
+ /* Services Section */
+.services {
+
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("images/services-cover.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    padding: 1rem 0;
+    box-shadow: #131313;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.services h1 {
+    background-color: #ff817f;
+    background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.services__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+}
+
+.services__card {
+    margin: 5px;
+    height: 150px;
+    width: 150px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+    transition: 0.3.s ease-in;
+}
+
+.services__card:nth-child(2) {
+    
+    background-image: url('images/photo1.jpg');
+    background-size: cover;
+}
+
+.services__card:nth-child(3) {
+    background-image: url('images/photo2.jpg');
+    background-size: cover;
+}
+
+.services__card h2 {
+    text-align: center;
+    font-size: 10px;
+}
+
+.services__card p {
+    text-align: center;
+    margin-top: 4px;
+    font-size: 5px;
+}
+
+.services__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.services__card button {
+    color: #fff;
+    padding: 14px 24px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #131313;
+    font-size: 10px;
+}
+
+.services__card button:hover {
+    cursor: pointer;
+}
+
+.services__card:hover {
+    transform: scale(1.075);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+@media screen and (max-width: 362px) {
+    .Services__wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 362px) {
+    . services__wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+        </style>
+    </head>
+    <body>
+        
+        
+
+    <!-- Navbar Section -->
+
+    
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" id="navbar__logo">Isr Ael</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+              <li class="navbar__item">
+                  <a href="#Israel" class="navbar__links" id="home-page"><img class="nav" src="images/photo1.jpg" alt="photo" /></a>
+              </li>
+              <li class="navbar__item">
+                <a href="#about" class="navbar__links" id="about-page">About</a>
+            </li>
+            <li class="navbar__item">
+                <a href="#services" class="navbar__links" id="services-page">Services</a>
+            </li>
+            <li class="navbar__btn">
+               <a href="#sing-up" class="button" id="singup">Sign Up</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    
+     <!-- Services Section -->
+
+        <div class="services" id="services">
+
+            <h1>photo gallery</h1>
+            <div class="services__wrapper">
+                <div class="services__card">
+                    
+                </div>
+                <div class="services__card">
+                </div>
+                
+                <div class="services__card">
+                    
+                </div>
+                
+                <div class="services__card">
+                </div>
+            </div>
+        </div>
+       
+<footer class="footer">
+    <h1>this is a heading</h1>
+        <a href="tel: +260960387961">call me </a>
+        <br/>
+        <a href="mailto: aischilawa@gmail.com?subject=programming basics with Mr Kelvin">email me</a>
+        <br/>
+        <a href="https://www.facebook.com/profile.php?id=100042542475338">facebook</a>
+    
+</footer>
+
+
+        </body>
+    
+    <script>
+        const menu = document.querySelector('#mobile-menu')
+
+const menuLinks = document.querySelector('.navbar__menu')
+
+const navLogo = document.querySelector('#navbar__logo') 
+
+// Display Mobile Menu
+const mobileMenu = () => {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
+};
+
+menu.addEventListener('click', mobileMenu);
+
+// Show active menu when scrolling
+const highlightMenu = () => {
+    const elem = document.querySelector('.highlight')
+    const homeMenu = document.querySelector('#home-page')
+    const aboutMenu = document.querySelector('#about-page')
+    const servicesMenu = document.querySelector('#services-page')
+    let scrollpos = window.scrollY;
+    // console.log(scrollpos);
+
+    // adds 'highlight' class to my menu items
+    if(window.innerWidth > 960 && scrollpos < 600) {
+        homeMenu.classList.add('highligth')
+        aboutMenu.classList.remove('highlight')
+        return
+    } else if (window.innerWidth > 960 && scrollpos < 1400) {
+        aboutMenu.classList.add('highligth');
+        homeMenu.classList.remove('highligth');
+        servicesMenu.classList.remove('highligth');
+        return
+    }
+
+    else if (window.innerWidth > 960 && scrollpos < 2345) {
+        servicesMenu.classList.add('highligth')
+        aboutMenu.classList.remove('highligth')
+        return
+    }
+
+    if((elem && window.innerWidth < 960 && scrollpos <600) || elem) {
+        elem.classList.remove('highlight')
+    }
+};
+
+window.addEventListener('scroll', highlightMenu)
+window.addEventListener('click', highlightMenu)
+
+// Close mobile Menu when clicking on a menu item
+const hideMobileMenu = () => {
+    const menuBars = document.querySelector('.is-active')
+    if(window.innerWidth <= 768 && menuBars) {
+        menu.classList.toggle('is-active')
+        menuLinks.classList.remove('active')
+    }
+}
+
+menuLinks.addEventListener('click', hideMobileMenu);
+navLogo.addEventListener('click', hideMobileMenu);
+    </script>
+    
+    
+</html>
